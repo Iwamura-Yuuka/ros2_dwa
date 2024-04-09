@@ -1,0 +1,10 @@
+<launch>
+    <!-- node -->
+    <node pkg="ros2_dwa" exec="ros2_dwa_node" name="ros2_dwa_node">
+        <remap from="/local_map/obstacle" to="/obstacle_pose">
+        <!-- <param from="$(find-pkg-share ros2_dwa)/config/param/debug_local_path_planner.yaml" /> -->
+    </node>
+
+    <!-- bagfile -->
+    <!-- <node pkg="ros2 bag" type="play" name="play" args="$(env HOME)/bagfiles/chibi24/team_c/debug_local_path_planner clock"/> -->
+</launch>
